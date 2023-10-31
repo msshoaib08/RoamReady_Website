@@ -89,22 +89,6 @@
 	}
 
 	/**
-	 * Back to top button
-	 */
-	let backtotop = select('.back-to-top');
-	if (backtotop) {
-		const toggleBacktotop = () => {
-			if (window.scrollY > 100) {
-				backtotop.classList.add('active');
-			} else {
-				backtotop.classList.remove('active');
-			}
-		};
-		window.addEventListener('load', toggleBacktotop);
-		onscroll(document, toggleBacktotop);
-	}
-
-	/**
 	 * Mobile nav toggle
 	 */
 	on('click', '.mobile-nav-toggle', function (e) {
@@ -146,6 +130,21 @@
 			}
 		}
 	});
+
+	/**
+	 * Preloader
+	 */
+	const preloader = document.querySelector('#preloader');
+	if (preloader) {
+		window.addEventListener('load', () => {
+			setTimeout(() => {
+				preloader.classList.add('loaded');
+			}, 1000);
+			setTimeout(() => {
+				preloader.remove();
+			}, 2000);
+		});
+	}
 
 	/**
 	 * Intro Carousel
