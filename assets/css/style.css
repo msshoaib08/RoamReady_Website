@@ -553,17 +553,17 @@ h6 {
 	margin-right: 0.6rem;
 }
 
-.header .logo h4 {
+/* .header .logo p {
 	font-size: 2rem;
 	font-weight: 700;
-	/* letter-spacing: 1px; */
+	letter-spacing: 1px;
 	color: var(--primary-purple);
 	margin-top: 0.3rem;
 }
 
 .header .logo span {
 	color: var(--orange);
-}
+} */
 
 /*--------------------------------------------------------------
 # Navigation Menu
