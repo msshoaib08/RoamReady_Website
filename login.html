@@ -21,7 +21,6 @@
 			href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
 			rel="stylesheet"
 		/>
-		<link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet" />
 
 		<!-- Font Awesome CDN Link -->
 		<link
@@ -45,16 +44,13 @@
 								<div
 									class="feedback-box d-lg-flex d-none justify-content-between flex-column"
 								>
-									<div class="logo">
-										<!-- <img
-											src="assets/img/logo.svg"
+									<a href="index.html" class="logo">
+										<img
+											src="assets/img/logo.png"
 											alt="logo"
 											class="img-fluid"
-										/> -->
-										<a href="index.html"
-											><h4>Roam<span>Ready</span></h4></a
-										>
-									</div>
+										/>
+									</a>
 									<div class="content">
 										<h1>
 											Navigating Your Path to
@@ -223,14 +219,12 @@
 								<!-- FeedbackBox Only Mobile / Tab View -->
 								<div class="feedback-mobile-box" id="feedback-box-mobile">
 									<div class="logo d-flex flex-column align-items-start">
-										<!-- <img
-											src="assets/img/full-logo.svg"
+										<img
+											src="assets/img/logo.png"
 											alt="logo"
 											class="img-fluid w-auto"
-										/> -->
-										<a href="index.html"
-											><h4>Roam<span>Ready</span></h4></a
-										>
+										/>
+
 										<span class="tagline mt-3 ps-2"
 											>Your smart travel companion</span
 										>
@@ -279,14 +273,12 @@
 								<!-- 2nd Login Page Only Mobile / Tab View -->
 								<div class="login-mobile-view" id="mobile-login-page">
 									<div class="logo d-flex flex-column align-items-start">
-										<!-- <img
-											src="assets/img/full-logo.svg"
+										<img
+											src="assets/img/logo.png"
 											alt="logo"
 											class="img-fluid w-auto"
-										/> -->
-										<a href="index.html"
-											><h4>Roam<span>Ready</span></h4></a
-										>
+										/>
+
 										<span class="tagline mt-3 ps-2"
 											>Your smart travel companion</span
 										>
@@ -317,7 +309,7 @@
 														type="email"
 														name="email"
 														class="form-control"
-														id="yourEmail"
+														id="mobEmail"
 														placeholder="Enter Email"
 														required
 													/>
@@ -330,7 +322,7 @@
 														type="password"
 														name="password"
 														class="form-control"
-														id="yourPassword"
+														id="mobPassword"
 														placeholder="Password"
 														required
 													/>
@@ -350,7 +342,7 @@
 														name="terms"
 														type="checkbox"
 														value=""
-														id="rememberMe"
+														id="mobrememberMe"
 														required
 													/>
 													<label class="form-check-label" for="rememberMe"
@@ -420,9 +412,9 @@
 														required
 													/>
 
-													<!-- <span class="input-group-text show-pass-btn">
+													<span class="input-group-text show-pass-btn">
 														<i class="fa-solid fa-eye-slash"></i>
-													</span> -->
+													</span>
 												</div>
 											</div>
 
@@ -435,7 +427,7 @@
 														name="terms"
 														type="checkbox"
 														value=""
-														id="rememberMe"
+														id="RememberMe"
 														required
 													/>
 													<label class="form-check-label" for="rememberMe"
@@ -486,6 +478,9 @@
 		</main>
 		<!-- End #main -->
 
+		<!-- Vendor JS Files -->
+		<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
 		<script>
 			function showLoginForm() {
 				let feedbackPage = document.getElementById('feedback-box-mobile');
@@ -504,9 +499,6 @@
 				loginPage.classList.remove('activeLoginPage');
 			}
 		</script>
-
-		<!-- Vendor JS Files -->
-		<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 		<!-- Template Main JS File -->
 		<script src="assets/js/main.js"></script>

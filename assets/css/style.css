@@ -167,6 +167,7 @@ h6 {
 .feedback-box .logo img {
 	width: 4rem;
 	height: 4rem;
+	mix-blend-mode: multiply;
 }
 
 .feedback-box .logo h4 {
@@ -347,8 +348,10 @@ h6 {
 	margin-top: 1rem;
 }
 
-.login-body form #yourEmail,
-.login-body form #yourPassword {
+#yourEmail,
+#yourPassword,
+#mobEmail,
+#mobPassword {
 	padding: 1.4rem;
 	background: var(--pure-white);
 	border-radius: 0.8rem;
@@ -358,12 +361,15 @@ h6 {
 	border: none;
 }
 
-.login-body form #yourEmail::placeholder,
-.login-body form #yourPassword::placeholder {
+#yourEmail::placeholder,
+#yourPassword::placeholder,
+#mobEmail::placeholder,
+#mobPassword::placeholder {
 	color: var(--grey);
 }
 
-.login-body form .form-check #rememberMe {
+#rememberMe,
+#mobrememberMe {
 	width: 1.6rem;
 	height: 1.6rem;
 	border-radius: 0.4rem;
@@ -375,7 +381,8 @@ h6 {
 	background-color: var(--primary-purple);
 }
 
-.login-body form #yourPassword {
+#yourPassword,
+#mobPassword {
 	border-top-right-radius: 0;
 	border-bottom-right-radius: 0;
 	border-right: none;
@@ -606,20 +613,18 @@ h6 {
 
 .header .logo img {
 	max-height: 4rem;
-	margin-right: 0.6rem;
 }
 
-/* .header .logo p {
-	font-size: 2rem;
+.header .logo h4 {
+	font-size: 1.6rem;
 	font-weight: 700;
-	letter-spacing: 1px;
 	color: var(--primary-purple);
-	margin-top: 0.3rem;
+	margin-bottom: 0;
 }
 
 .header .logo span {
 	color: var(--orange);
-} */
+}
 
 /*--------------------------------------------------------------
 # Navigation Menu
@@ -1055,6 +1060,14 @@ section {
 	}
 }
 
+/* Budget and City Badge Pill */
+.see-india .box .content .badge {
+	font-size: 1.3rem;
+	font-weight: 500;
+	background: var(--light-blue);
+	color: var(--black-blue);
+}
+
 /*--------------------------------------------------------------
 # Call to Action
 --------------------------------------------------------------*/
@@ -1305,6 +1318,10 @@ section {
 	margin-bottom: 1.5rem;
 }
 
+.footer .footer-top .footer-info .logo img {
+	max-height: 4rem;
+}
+
 /* .footer .footer-top .footer-info .logo img {
 	max-height: 4rem;
 	margin-right: 0.6rem;
@@ -1315,6 +1332,8 @@ section {
 	font-weight: 700;
 	color: var(--primary-purple);
 	margin-top: 0.3rem;
+	margin-bottom: 0;
+	padding-bottom: 0;
 }
 
 .footer .footer-top .footer-info .logo h4 span {
