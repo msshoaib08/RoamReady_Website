@@ -471,52 +471,72 @@ h6 {
 /*--------------------------------------------------------------
 # Breadcrumbs
 --------------------------------------------------------------*/
-.breadcrumbs {
-	padding: 1.5rem 0;
-	background: var(--black-blue);
-	min-height: 4rem;
-	margin-top: 82px;
+.breadcrumbs .page-header {
+	padding: 14rem 0 8rem 0;
+	position: relative;
+}
+
+.breadcrumbs .page-header:before {
+	content: '';
+	background-color: rgba(28, 5, 59, 0.43);
+	position: absolute;
+	inset: 0;
+}
+
+.breadcrumbs .page-header h2 {
+	font-size: 4rem;
+	font-weight: 600;
 	color: var(--pure-white);
 }
 
-@media (max-width: 992px) {
-	.breadcrumbs {
-		margin-top: 5.7rem;
-	}
+.breadcrumbs .page-header p {
+	font-size: 1.6rem;
+	color: var(--light-grey);
 }
 
-.breadcrumbs h2 {
-	font-size: 2.8rem;
-	font-weight: 500;
+.breadcrumbs nav {
+	background: var(--light-blue);
+	padding: 20px 0;
 }
 
-.breadcrumbs ol {
+.breadcrumbs nav ol {
 	display: flex;
 	flex-wrap: wrap;
 	list-style: none;
-	padding: 0 0 1rem 0;
 	margin: 0;
-	font-size: 1.4rem;
+	padding: 0;
+	font-size: 1.6rem;
+	font-weight: 600;
+	color: var(--black-blue);
 }
 
-.breadcrumbs ol a {
-	color: var(--pure-white);
+.breadcrumbs nav ol a {
+	color: var(--grey);
 	transition: 0.3s;
 }
 
-.breadcrumbs ol a:hover {
+.breadcrumbs nav ol a:hover {
 	text-decoration: underline;
 }
 
-.breadcrumbs ol li + li {
+.breadcrumbs nav ol li + li {
 	padding-left: 1rem;
 }
 
-.breadcrumbs ol li + li::before {
+.breadcrumbs nav ol li + li::before {
 	display: inline-block;
-	padding-right: 10px;
-	color: #8894f6;
+	padding-right: 1rem;
+	color: var(--primary-purple);
 	content: '/';
+}
+
+@media (max-width: 500px) {
+	.breadcrumbs .page-header h2 {
+		font-size: 3rem;
+	}
+	.breadcrumbs .page-header p {
+		font-size: 1.4rem;
+	}
 }
 
 /*--------------------------------------------------------------
@@ -945,6 +965,136 @@ section {
 		font-size: 2.8rem;
 		line-height: 3.2rem;
 	}
+}
+
+/*--------------------------------------------------------------
+# About Section
+--------------------------------------------------------------*/
+.about-breadcrumb .page-header {
+	background: url('../img/about-breadcrumb-bg.jpeg') center/cover no-repeat;
+}
+
+.about .about-img {
+	background: url('../img/about-img.jpeg') center/cover no-repeat;
+}
+
+.about h2 {
+	margin: 3rem 0;
+	font-size: 4.8rem;
+	font-weight: 700;
+	color: var(--black-blue);
+}
+
+@media (max-width: 500px) {
+	.about h2 {
+		font-size: 3rem;
+	}
+}
+
+@media (min-width: 991px) {
+	.about h2 {
+		max-width: 65%;
+		margin: 0 0 8rem 0;
+	}
+}
+
+.about .our-story {
+	padding: 4rem;
+	background-color: var(--light-white);
+}
+
+@media (min-width: 991px) {
+	.about .our-story {
+		padding-right: 35%;
+	}
+}
+
+.about .our-story h4 {
+	text-transform: uppercase;
+	font-size: 1.8rem;
+	color: var(--grey);
+}
+
+.about .our-story h3 {
+	font-size: 3.6rem;
+	font-weight: 700;
+	margin-bottom: 2rem;
+	color: var(--black-blue);
+}
+
+.about .our-story p {
+	margin-bottom: 0;
+	font-size: 1.6rem;
+}
+
+.about ul {
+	list-style: none;
+	padding: 0;
+	font-size: 1.5rem;
+}
+
+.about ul li {
+	padding: 0.5rem 0;
+	display: flex;
+	align-items: center;
+}
+
+.about ul i {
+	font-size: 2rem;
+	margin-right: 1rem;
+	color: var(--primary-purple);
+}
+
+.about .about-img {
+	min-height: 55rem;
+	background-size: cover;
+	background-position: center;
+}
+
+@media (min-width: 992px) {
+	.about .about-img {
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
+}
+
+/*--------------------------------------------------------------
+# About Features
+--------------------------------------------------------------*/
+.about-features {
+	padding-top: 2rem;
+}
+
+.about-features .icon-box {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	padding: 2rem;
+	transition: ease-in-out 0.3s;
+	box-shadow: 0.2rem 0 3.5rem 0 rgba(131, 56, 236, 0.08);
+	border-radius: 1rem;
+	cursor: pointer;
+	transition: ease-in-out 0.3s;
+}
+
+.about-features .icon-box i {
+	font-size: 3.2rem;
+	padding-right: 1rem;
+	line-height: 1;
+}
+
+.about-features .icon-box h3 {
+	font-weight: 600;
+	margin: 0;
+	padding: 0;
+	line-height: 1;
+	font-size: 1.6rem;
+	color: var(--black-blue);
+}
+
+.about-features .icon-box:hover {
+	background: var(--light-blue);
 }
 
 /*--------------------------------------------------------------
