@@ -176,6 +176,72 @@ document.addEventListener('DOMContentLoaded', () => {
 	window.addEventListener('load', initSwiper);
 
 	/**
+	 * Initiate glightbox
+	 */
+	const glightbox = GLightbox({
+		selector: '.glightbox',
+	});
+
+	/**
+	 * Destinations isotope and filter
+	 */
+	let destinationIsotope = document.querySelector('.destinations-isotope');
+
+	if (destinationIsotope) {
+		let destinationFilter = destinationIsotope.getAttribute(
+			'data-destinations-filter'
+		)
+			? destinationIsotope.getAttribute('data-destinations-filter')
+			: '*';
+		let destinationLayout = destinationIsotope.getAttribute(
+			'data-destinations-layout'
+		)
+			? destinationIsotope.getAttribute('data-destinations-layout')
+			: 'masonry';
+		let destinationSort = destinationIsotope.getAttribute(
+			'data-destinations-sort'
+		)
+			? destinationIsotope.getAttribute('data-destinations-sort')
+			: 'original-order';
+
+		window.addEventListener('load', () => {
+			let destinationsIsotope = new Isotope(
+				document.querySelector('.destinations-container'),
+				{
+					itemSelector: '.destinations-item',
+					layoutMode: destinationLayout,
+					filter: destinationFilter,
+					sortBy: destinationSort,
+				}
+			);
+
+			let menuFilters = document.querySelectorAll(
+				'.destinations-isotope .destinations-flters li'
+			);
+			menuFilters.forEach(function (el) {
+				el.addEventListener(
+					'click',
+					function () {
+						document
+							.querySelector(
+								'.destinations-isotope .destinations-flters .filter-active'
+							)
+							.classList.remove('filter-active');
+						this.classList.add('filter-active');
+						destinationsIsotope.arrange({
+							filter: this.getAttribute('data-filter'),
+						});
+						if (typeof aos_init === 'function') {
+							aos_init();
+						}
+					},
+					false
+				);
+			});
+		});
+	}
+
+	/**
 	 * Animation on scroll
 	 */
 	function aos_init() {

@@ -1498,6 +1498,97 @@ section {
 }
 
 /*--------------------------------------------------------------
+# Destinations Section
+--------------------------------------------------------------*/
+.destinations .destinations-flters {
+	padding: 0 0 2rem 0;
+	margin: 0 auto;
+	list-style: none;
+	text-align: center;
+}
+
+.destinations .destinations-flters li {
+	cursor: pointer;
+	display: inline-block;
+	padding: 0;
+	font-size: 1.8rem;
+	font-weight: 500;
+	margin: 0 1rem;
+	line-height: 1;
+	transition: all 0.3s ease-in-out;
+}
+
+.destinations .destinations-flters li:hover,
+.destinations .destinations-flters li.filter-active {
+	color: var(--orange);
+}
+
+.destinations .destinations-flters li:first-child {
+	margin-left: 0;
+}
+
+.destinations .destinations-flters li:last-child {
+	margin-right: 0;
+}
+
+@media (max-width: 575px) {
+	.destinations .destinations-flters li {
+		font-size: 1.4rem;
+		margin: 0 0.5rem;
+	}
+}
+
+.destinations .destinations-wrap {
+	box-shadow: 0px 1rem 3rem rgba(131, 56, 236, 0.08);
+	border-radius: 1rem;
+	height: 100%;
+	overflow: hidden;
+}
+
+.destinations .destinations-wrap img {
+	transition: 0.3s;
+	position: relative;
+	z-index: 1;
+}
+
+.destinations .destinations-wrap .destinations-info {
+	padding: 2.5rem 2rem;
+	background: var(--pure-white);
+	position: relative;
+	border-top: 1px solid var(--light-grey);
+	z-index: 2;
+}
+
+.destinations .destinations-wrap .destinations-info h4 {
+	padding-bottom: 1rem;
+	margin-bottom: 1rem;
+	font-size: 1.8rem;
+	font-weight: 600;
+	padding-right: 5rem;
+	color: var(--black-blue);
+	border-bottom: 1px solid var(--light-grey);
+}
+
+.destinations .destinations-wrap .destinations-info a {
+	margin-top: 1rem;
+	font-size: 1.4rem;
+	color: var(--primary-purple);
+}
+
+.destinations .destinations-wrap .destinations-info a i {
+	margin-left: 0.5rem;
+	transition: 0.3s;
+}
+
+.destinations .destinations-wrap .destinations-info a:hover i {
+	transform: translateX(0.5rem);
+}
+
+.destinations .destinations-wrap:hover img {
+	transform: scale(1.1);
+}
+
+/*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
 .footer {
