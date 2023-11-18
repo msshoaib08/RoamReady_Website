@@ -1072,6 +1072,7 @@ section {
 	padding-top: 2rem;
 }
 
+.mood-selection .icon-box,
 .about-features .icon-box {
 	width: 100%;
 	display: flex;
@@ -1084,12 +1085,14 @@ section {
 	transition: ease-in-out 0.3s;
 }
 
+.mood-selection .icon-box i,
 .about-features .icon-box i {
 	font-size: 3.2rem;
 	padding-right: 1rem;
 	line-height: 1;
 }
 
+.mood-selection .icon-box h3,
 .about-features .icon-box h3 {
 	font-weight: 600;
 	margin: 0;
@@ -1099,10 +1102,18 @@ section {
 	color: var(--black-blue);
 }
 
+.mood-selection .icon-box:hover,
 .about-features .icon-box:hover {
 	background: var(--light-blue);
 }
 
+.mood-selection .icon-box:nth-child(1) {
+	background: var(--light-blue);
+}
+
+.mood-selection .icon-box:nth-child(2) {
+	background: #000;
+}
 /*--------------------------------------------------------------
 # Trip planner
 --------------------------------------------------------------*/
