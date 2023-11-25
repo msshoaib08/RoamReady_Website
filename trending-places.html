@@ -238,6 +238,15 @@
 									class="img-fluid"
 								/>
 								<div class="content">
+									<div
+										class="saved-destination d-flex justify-content-center align-items-center"
+										type="button"
+										class="btn btn-primary"
+										data-bs-toggle="modal"
+										data-bs-target="#savedDestination"
+									>
+										<i class="fa-regular fa-heart"></i>
+									</div>
 									<h3>Nainital</h3>
 									<div
 										class="tags d-flex align-items-center gap-3 mb-4 flex-wrap align-self-start"
@@ -270,6 +279,15 @@
 									class="img-fluid"
 								/>
 								<div class="content">
+									<div
+										class="saved-destination d-flex justify-content-center align-items-center"
+										type="button"
+										class="btn btn-primary"
+										data-bs-toggle="modal"
+										data-bs-target="#savedDestination"
+									>
+										<i class="fa-regular fa-heart"></i>
+									</div>
 									<h3>Mussoorie</h3>
 									<div
 										class="tags d-flex align-items-center gap-3 mb-4 flex-wrap align-self-start"
@@ -343,7 +361,7 @@
 					>
 						<div>
 							<ul class="destinations-flters">
-								<li data-filter="*" class="filter-active">All</li>
+								<li data-filter="*" class="filter-active">Mix</li>
 								<li data-filter=".filter-nature">Adventure</li>
 								<li data-filter=".filter-history">Culture</li>
 								<li data-filter=".filter-sea">Beaches</li>
@@ -365,7 +383,7 @@
 									/></a>
 									<div class="destinations-info">
 										<h4>Amritsar, Punjab</h4>
-										<a href="login.html"
+										<a href="single-destination.html"
 											><span>Create Itinerary</span>
 											<i class="fa-solid fa-angles-right"></i
 										></a>
@@ -443,7 +461,7 @@
 							<div class="col-xl-4 col-md-6 destinations-item filter-history">
 								<div class="destinations-wrap">
 									<a
-										href="assets/img/destinations/mahabaleshwar.png"
+										href="assets/img/destinations/lucknow.png"
 										data-gallery="portfolio-gallery-app"
 										class="glightbox"
 										><img
@@ -752,6 +770,37 @@
 			</div>
 		</footer>
 		<!-- End Footer -->
+
+		<!-- Modal Popup for Saved Destination -->
+		<div
+			class="modal fade"
+			id="savedDestination"
+			data-bs-backdrop="static"
+			data-bs-keyboard="false"
+			tabindex="-1"
+			aria-labelledby="savedDestinationLabel"
+			aria-hidden="true"
+		>
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button
+							type="button"
+							class="btn-close"
+							data-bs-dismiss="modal"
+							aria-label="Close"
+						></button>
+					</div>
+					<div
+						class="modal-body d-flex justify-content-center text-center flex-column"
+					>
+						<h4>Welcome Adventurer!</h4>
+						<p>Login or SignUp to save your favourite destinations.</p>
+						<a href="login.html">Login or Signup</a>
+					</div>
+				</div>
+			</div>
+		</div>
 
 		<!-- Preloader -->
 		<div

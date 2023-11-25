@@ -1502,12 +1502,58 @@ section {
 }
 
 /* ----- Summer Destination Section ----- */
+.summer-destinations .saved-destination {
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+	width: 4rem;
+	height: 4rem;
+	border-radius: 50%;
+	background: rgba(0, 0, 0, 0.3);
+	cursor: pointer;
+}
+
+.summer-destinations .content i.fa-heart {
+	font-size: 2rem;
+	color: var(--light-white);
+}
+
 .summer-destinations .content p {
 	margin-bottom: 0.8rem;
 	font-size: 1.4rem;
 	color: var(--light-grey);
 }
 
+/* Saved Destination Modal Popup */
+#savedDestination .modal-content {
+	height: 25rem;
+	border-radius: 1rem;
+}
+
+#savedDestination .modal-header {
+	border-bottom: none;
+}
+
+#savedDestination .modal-body h4 {
+	font-size: 1.8rem;
+	color: var(--black-blue);
+	margin-bottom: 1rem;
+}
+
+#savedDestination .modal-body p {
+	font-size: 1.6rem;
+	color: var(--grey);
+}
+
+#savedDestination .modal-body a {
+	width: fit-content;
+	margin: 2rem auto 0 auto;
+	padding: 1rem 2rem;
+	background: var(--primary-purple);
+	color: var(--light-white);
+	font-size: 1.6rem;
+	border-radius: 0.6rem;
+}
 /*--------------------------------------------------------------
 # Destinations Section
 --------------------------------------------------------------*/
