@@ -240,10 +240,8 @@
 								<div class="content">
 									<div
 										class="saved-destination d-flex justify-content-center align-items-center"
-										type="button"
-										class="btn btn-primary"
 										data-bs-toggle="modal"
-										data-bs-target="#savedDestination"
+										data-bs-target="#loginModal"
 									>
 										<i class="fa-regular fa-heart"></i>
 									</div>
@@ -260,7 +258,10 @@
 										where tranquility meets lakeside allure. Explore your watery
 										wonderland.
 									</p>
-									<a href="#"
+									<a
+										href="#"
+										data-bs-toggle="modal"
+										data-bs-target="#loginModal"
 										><span>Explore</span><i class="fa-solid fa-angle-right"></i
 									></a>
 								</div>
@@ -281,10 +282,8 @@
 								<div class="content">
 									<div
 										class="saved-destination d-flex justify-content-center align-items-center"
-										type="button"
-										class="btn btn-primary"
 										data-bs-toggle="modal"
-										data-bs-target="#savedDestination"
+										data-bs-target="#loginModal"
 									>
 										<i class="fa-regular fa-heart"></i>
 									</div>
@@ -301,7 +300,10 @@
 										landscapes, promising cherished moments in the lap of the
 										hills.
 									</p>
-									<a href="#"
+									<a
+										href="#"
+										data-bs-toggle="modal"
+										data-bs-target="#loginModal"
 										><span>Explore</span> <i class="fa-solid fa-angle-right"></i
 									></a>
 								</div>
@@ -320,6 +322,13 @@
 									class="img-fluid"
 								/>
 								<div class="content">
+									<div
+										class="saved-destination d-flex justify-content-center align-items-center"
+										data-bs-toggle="modal"
+										data-bs-target="#loginModal"
+									>
+										<i class="fa-regular fa-heart"></i>
+									</div>
 									<h3>Ooty</h3>
 									<div
 										class="tags d-flex align-items-center gap-3 mb-4 flex-wrap align-self-start"
@@ -333,7 +342,10 @@
 										air dances, stars twinkle, and memories bloom. Ooty, your
 										secret hideaway in nature's embrace.
 									</p>
-									<a href="#"
+									<a
+										href="#"
+										data-bs-toggle="modal"
+										data-bs-target="#loginModal"
 										><span>Explore</span> <i class="fa-solid fa-angle-right"></i
 									></a>
 								</div>
@@ -774,11 +786,11 @@
 		<!-- Modal Popup for Saved Destination -->
 		<div
 			class="modal fade"
-			id="savedDestination"
+			id="loginModal"
 			data-bs-backdrop="static"
 			data-bs-keyboard="false"
 			tabindex="-1"
-			aria-labelledby="savedDestinationLabel"
+			aria-labelledby="loginModalLabel"
 			aria-hidden="true"
 		>
 			<div class="modal-dialog modal-dialog-centered">

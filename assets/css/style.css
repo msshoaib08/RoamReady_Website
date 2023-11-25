@@ -716,23 +716,28 @@ h6 {
 
 .navbar .getstarted,
 .navbar .getstarted:focus {
-	background: var(--primary-purple);
+	/* background: var(--primary-purple); */
 	padding: 0.8rem 2rem;
-	margin-left: 3rem;
+	margin-left: 1rem;
 	border-radius: 0.4rem;
-	color: var(--pure-white);
+	color: var(--black-blue);
+	/* color: var(--pure-white); */
+}
+
+.navbar .getstarted i,
+.navbar .getstarted:focus i {
+	font-size: 1.8rem;
 }
 
 .navbar .getstarted:hover,
 .navbar .getstarted:focus:hover {
-	color: var(--pure-white);
-	background: var(--primary-purple);
+	font-size: 1.8rem;
 }
-
+/* 
 .inner-page-header.header-scrolled .navbar .getstarted,
 .inner-page-header.header-scrolled .navbar .getstarted:focus {
 	color: var(--pure-white);
-}
+} */
 
 /**
 * Mobile Navigation 
@@ -1525,35 +1530,53 @@ section {
 }
 
 /* Saved Destination Modal Popup */
-#savedDestination .modal-content {
+#loginModal .modal-content {
 	height: 25rem;
+	background: rgba(191, 191, 191, 0.78);
+	backdrop-filter: blur(4px);
+	/* box-shadow: 0 0.8rem 3rem 0 rgba(31, 38, 135, 0.37); */
 	border-radius: 1rem;
 }
 
-#savedDestination .modal-header {
+#loginModal .modal-header {
 	border-bottom: none;
 }
 
-#savedDestination .modal-body h4 {
+#loginModal .modal-body h4 {
 	font-size: 1.8rem;
 	color: var(--black-blue);
 	margin-bottom: 1rem;
+	font-weight: 600;
 }
 
-#savedDestination .modal-body p {
+#loginModal .modal-body p {
 	font-size: 1.6rem;
-	color: var(--grey);
+	color: #444;
+	font-weight: 500;
 }
 
-#savedDestination .modal-body a {
+#loginModal .modal-body a {
+	position: relative;
 	width: fit-content;
 	margin: 2rem auto 0 auto;
 	padding: 1rem 2rem;
 	background: var(--primary-purple);
 	color: var(--light-white);
 	font-size: 1.6rem;
+	font-weight: 500;
 	border-radius: 0.6rem;
+	transition: 0.3s;
 }
+
+#loginModal .modal-body a i {
+	margin-left: 0.5rem;
+	transition: 0.3s;
+}
+
+#loginModal .modal-body a:hover i {
+	transform: translateX(0.5rem);
+}
+
 /*--------------------------------------------------------------
 # Destinations Section
 --------------------------------------------------------------*/
@@ -1643,6 +1666,96 @@ section {
 
 .destinations .destinations-wrap:hover img {
 	transform: scale(1.1);
+}
+
+/*--------------------------------------------------------------
+# Team
+--------------------------------------------------------------*/
+.team .member {
+	text-align: center;
+	background: var(--grey);
+	position: relative;
+	overflow: hidden;
+	border-radius: 1rem;
+}
+
+.team .member .member-info {
+	opacity: 0;
+	position: absolute;
+	bottom: 0;
+	top: 0;
+	left: 0;
+	right: 0;
+	transition: 0.2s;
+}
+
+.team .member .member-info-content {
+	position: absolute;
+	left: 5rem;
+	right: 0;
+	bottom: 0;
+	transition: bottom 0.4s;
+}
+
+.team .member .member-info-content h4 {
+	font-weight: 700;
+	margin-bottom: 0.2rem;
+	font-size: 1.8rem;
+	color: var(--pure-white);
+}
+
+.team .member .member-info-content span {
+	display: block;
+	font-size: 1.3rem;
+	color: var(--light-grey);
+}
+
+.team .member .social {
+	position: absolute;
+	left: -5rem;
+	top: 0;
+	bottom: 0;
+	width: 5rem;
+	transition: left ease-in-out 0.3s;
+	background: rgba(131, 56, 236, 0.5);
+	text-align: center;
+}
+
+.team .member .social a {
+	transition: color 0.3s;
+	display: block;
+	color: var(--pure-white);
+	margin-top: 1.5rem;
+}
+
+.team .member .social a:hover {
+	color: var(--black-blue);
+}
+
+.team .member .social i {
+	font-size: 1.8rem;
+	margin: 0 0.2rem;
+}
+
+.team .member:hover .member-info {
+	background: linear-gradient(
+		0deg,
+		rgba(131, 56, 236, 0.9) 0%,
+		rgba(131, 56, 236, 0.5) 20%,
+		rgba(65, 40, 108, 0) 100%
+	);
+	opacity: 1;
+	transition: 0.4s;
+}
+
+.team .member:hover .member-info-content {
+	bottom: 2rem;
+	transition: bottom 0.4s;
+}
+
+.team .member:hover .social {
+	left: 0;
+	transition: left ease-in-out 0.3s;
 }
 
 /*--------------------------------------------------------------
