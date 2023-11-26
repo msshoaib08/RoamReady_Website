@@ -144,7 +144,8 @@ h6 {
 }
 
 .feedback-box,
-.login-form {
+.login-form,
+.registraion-form {
 	min-height: 90vh;
 	height: 100%;
 }
@@ -303,26 +304,48 @@ h6 {
 }
 
 /* Login Form */
-.register .login-form {
+.register .login-form,
+.registraion-form {
 	background: transparent;
 	position: relative;
 	padding-block: 4rem;
 }
 
+.register-form-desk {
+	display: none;
+}
+
+@media (max-width: 991px) {
+	.login-form-desk,
+	.register-form-desk {
+		display: none;
+	}
+}
+
+@media (min-width: 991px) {
+	.register-form-desk.activeRegistrationFormDesk,
+	.login-form-desk.activeLoginFormDesk {
+		display: block;
+	}
+}
+
+.login-body,
 .login-body {
 	max-width: 100%;
 	padding-inline: 2rem;
 }
 
 @media (max-width: 1299px) and (min-width: 991px) {
-	.login-form .login-body {
+	.login-form .login-body,
+	.registraion-form .login-body {
 		max-width: 85%;
 		padding-inline: 5rem;
 	}
 }
 
 @media (min-width: 1300px) {
-	.login-form .login-body {
+	.login-form .login-body,
+	.registraion-form .login-body {
 		width: 70%;
 		padding-inline: 5rem;
 	}
@@ -348,10 +371,7 @@ h6 {
 	margin-top: 1rem;
 }
 
-#yourEmail,
-#yourPassword,
-#mobEmail,
-#mobPassword {
+.input-box {
 	padding: 1.4rem;
 	background: var(--pure-white);
 	border-radius: 0.8rem;
@@ -361,11 +381,12 @@ h6 {
 	border: none;
 }
 
-#yourEmail::placeholder,
-#yourPassword::placeholder,
-#mobEmail::placeholder,
-#mobPassword::placeholder {
+.input-box::placeholder {
 	color: var(--grey);
+}
+
+.input-box:focus {
+	box-shadow: none;
 }
 
 #rememberMe,
@@ -379,13 +400,6 @@ h6 {
 
 .login-body form .form-check-input:checked {
 	background-color: var(--primary-purple);
-}
-
-#yourPassword,
-#mobPassword {
-	border-top-right-radius: 0;
-	border-bottom-right-radius: 0;
-	border-right: none;
 }
 
 .login-body form .show-pass-btn {
@@ -446,8 +460,13 @@ h6 {
 	display: none;
 }
 
+#mobile-registration-page {
+	display: none;
+}
+
 #feedback-box-mobile.activeLoginPage,
-#mobile-login-page.activeLoginPage {
+#mobile-login-page.activeLoginPage,
+#mobile-registration-page.activeRegistrationPage {
 	display: flex;
 	justify-content: space-between;
 	flex-direction: column;
